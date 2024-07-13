@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css">
+
+    <title>DONATION SERVICES</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        .container {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        
+        .logo {
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            color: #d5d57e;
+        }
+        
+        @keyframes blinkAnimation {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .logo h1 {
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            color: #d5d57e;
+            animation: blinkAnimation 1s infinite;
+        }
+        
+        .container1 img {
+            animation: blinkAnimation 1s infinite;
+        }
+        
+        .sidebar-menus {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: visible;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #af9c9c;
+            background-color: #6e3030;
+        }
+        
+        .sidebar-menus:hover {
+            width: 250px;
+        }
+        
+        .sidebar-menus a {
+            text-decoration: none;
+            color: #fff;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        .sidebar-menus a:hover {
+            background-color: #8c4242;
+        }
+        
+        .sidebar-menus ion-icon {
+            margin-right: 10px;
+        }
+        
+        .sidebar-logout {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            width: 250px;
+            background: transparent;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #fff;
+            overflow-y: visible;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .sidebar-logout:hover {
+            background-color: #8c4242;
+        }
+        
+        .sidebar-logout a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        .sidebar-logout a:hover {
+            text-decoration: underline;
+        }
+        
+        .main-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search {
+            flex: 1;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile {
+            font-size: 20px;
+            margin-right: 20px;
+            color: #fff;
+        }
+        
+        .profile a {
+            color: #c0daf0;
+            text-decoration: none;
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .card {
+            width: 18rem;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #474e5d;
+            color: #fff;
+        }
+        
+        .row::after {
+            content: normal;
+            clear: both;
+            display: table;
+        }
+        
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+        
+        .title {
+            color: #999;
+        }
+        
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .button:hover {
+            background-color: #555;
+        }
+        
+        .about-section {
+            background-color: #c4c0c0;
+            padding: 50px 0;
+            text-align: center;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .container p {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .team-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .team-section h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        
+        .team-section .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .team-section .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .team-section .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .team-section .card-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .team-section .card-text {
+            margin-bottom: 10px;
+        }
+        
+        .team-section .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        
+        .team-section .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleCaptions'), {
+                interval: 3000, // Set the interval for sliding
+                wrap: true // Set whether the carousel should cycle continuously or have hard stops
+            });
+        });
+    </script>
+    <div class="container">
+        <div class="main">
+            <div class="main-navbar">
+                <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+
+                <div class="profile">
+                    <a class="user" href="profile.php">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="logo">
+                <h1 class="logo">AIDINGHEART</h1>
+
+
+                <div class="container1">
+                    <img src="red-heart-with-small-glitter-particles-on-transparent-background-valentine-s-day-cut-out-design-element-3d-rendering-png.webp" width="250" height="180">
+                </div>
+            </div>
+
+
+            <div class="sidebar-menus">
+                <a href="home.html">
+                    <ion-icon name="storefront-outline"></ion-icon> Home</a>
+                <a href="contact.html">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>Contact us</a>
+                <a href="settings.html">
+                    <ion-icon name="Settings-outline"></ion-icon>Settings</a>
+            </div>
+            <div class="sidebar-logout">
+                <script src="log.js"></script>
+                <a href="logout.html">
+                    <ion-icon name="log-out-outline"></ion-icon>Logout</a>
+            </div>
+        </div>
+
+        <br>
+
+
+        <br>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="quotes_mahatma-ghandi_v2.jpg" class="d-block w-100" alt="images" width="500px" height="600px">
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <p>“When we give cheerfully and accept gratefully, everyone is blessed.”</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="wp6662015.jpg" class="d-block w-100" alt="images" width="500px" height="600px">
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <p>“Please support our cause with a small donation today!”</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="thank-you-for-the-donation-messages-and-quotes-ft.jpg" class="d-block w-100" alt="images" width="500px" height="600px">
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <p>Changing lives, one donation at a time.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+        </div><br></br>
+        <div class="card-container">
+            <div class="card a">
+                <img src="folded-clothes-in-a-brown-paper-box-with-the-inscription-donation-photo.jpg" class="card-img-top" alt="cloth">
+                <div class="card-body">
+                    <h5 class="card-title">Donate cloth</h5>
+                    <p class="card-text">Donate cloth more helpful. NB: Torn cloth should not be donated.</p>
+                    <a href="cloth.html" class="btn btn-primary">DONATE</a>
+                </div>
+            </div>
+            <div class="card b">
+                <img src="charity-financial-support-saving-concept-600nw-2136440783.webp" class="card-img-top" alt="Cash">
+                <div class="card-body">
+                    <h5 class="card-title">Donate Cash</h5>
+                    <p class="card-text">Cash donation are accepted for deductions if they are below ₹2,000 NB:in-kind contribution such as food,cloth,medicines.etc..,
+                    </p>
+                    <a href="cash.html" class="btn btn-primary">DONATE</a>
+                </div>
+            </div>
+            <div class="card c">
+                <img src="images.jpg" class="card-img-top" alt="Books">
+                <div class="card-body">
+                    <h5 class="card-title">Donate Study Materials</h5>
+                    <p class="card-text">We do not accept<br> NB:Material in poor condition</p>
+                    <a href="study.html" class="btn btn-primary">DONATE</a>
+                </div>
+            </div>
+            <div class="card d">
+                <img src="hair-donation-banner.jpg" class="card-img-top" alt="Hair">
+                <div class="card-body">
+                    <h5 class="card-title">Donate Hair</h5>
+                    <p class="card-text"> Donate Hair more help full for cancer affected persons<br> To help full for hair growthing problems faced persons </p>
+                    <a href="hair.html" class="btn btn-primary">DONATE</a>
+                </div>
+            </div>
+            <div class="card e">
+                <img src="download.png" class="card-img-top" alt="Blood">
+                <div class="card-body">
+                    <h5 class="card-title">Donate Blood</h5>
+                    <p class="card-text">Blood donate is the most powerful goodness in the world<br> NB:If you have a fever or a productive cough..</p>
+                    <a href="blood.html" class="btn btn-primary">DONATE</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="about-section">
+            <div class="container">
+                <h1>About Us</h1>
+                <br>
+                <p>At AIDINGHEART, we are dedicated to making a positive impact on the world. Our mission is to provide support and assistance to those in need, offering hope and opportunities for a better future.</p>
+                </br>
+                <p>With a focus on compassion and generosity, we strive to make a difference in the lives of individuals and communities through various philanthropic initiatives.</p>
+                <p>Join us in our journey to spread kindness and create meaningful change!</p>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <div class="container">
+                <h2 class="text-center">Our Team</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <img src="Untitled.jpg" alt="Jane">
+                            <div class="card-body">
+                                <u><b><h5 class="card-title">AIDINGHEART Team Members</h5></b></u>
+                                <b><p class="card-text">Manager:</p></b>
+                                <p class="card-text">MrNoufalNoushad</p>
+                                <b> <p class="card-text">Assistand Manager:</p></b>
+                                <p class="card-text">Mr.Binoy.B</p>
+                                <b> <p class="card-number">Donation mangement Director</p></b>
+                                <p class="card-text">Mrs.Nikila.V.Pillai</p>
+                                <a href="contact.html" class="btn btn-primary">Contact for More Details</a>
+                                <a src="">
+                                    <a src="https://www.whatsapp.com/">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="team">
+            <marquee>
+                <h3>
+                    <b><p class="card-text">ANYBODY JOIN OUR TEAM TO INFORM THE "DONATION MANGER"</p></b>
+                </h3>
+            </marquee>
+        </div>
+
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </div>
+    </form>
+</body>
+
+</html>

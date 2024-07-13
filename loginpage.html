@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    /* styles.css */
+    /* Reset default browser styles */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing:content-box;
+    }
+    /* Centering the registration container */
+    
+    .registration-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    /* Styling the registration form */
+    
+    .registration-form {
+        width: 600px;
+        padding: 50px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+    /* Styling the form title */
+    
+    .registration-form h2 {
+        margin-bottom: 20px;
+        text-align: center;
+       font-size:30px;
+    }
+    /* Styling form groups */
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    /* Styling labels */
+    
+    .form-group label {
+        display: block;
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    /* Styling input fields */
+    
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        font-size: large;
+        border: 3px solid #ccc;
+        border-radius: 5px;
+    }
+    /* Styling the login button */
+    
+    .registration-form button {
+        width: 100%;
+        padding: 20px;
+        font-size: 30px;
+        border: none;
+        border-radius: 10px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .registration-form button:hover {
+        background-color: #0056b3;
+    }
+    /* Styling the registration link */
+    
+    .registration-link {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .registration-link a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    .registration-link a:hover {
+        text-decoration: underline;
+    }
+    
+    .registration-link {
+        font-family: Arial, sans-serif;
+        /* Set font family */
+        font-size: 20px;
+        /* Set font size */
+        color: #050505;
+        /* Set text color */
+        margin-top: 30px;
+        /* Add some space above the div */
+    }
+    
+    .registration-link a {
+        color: #007bff;
+        /* Set link color */
+        text-decoration: none;
+        /* Remove underline from links */
+    }
+    
+    .registration-link a:hover {
+        text-decoration: underline;
+        font-size: 20px;
+        /* Add underline on hover */
+    }
+    
+    .not {
+        font-size: 20px;
+        color: #000000;
+    }
+    
+    body {
+        background-image: url('thank-you-for-the-donation-messages-and-quotes-ft.jpg');
+        background-size: cover;
+        background-position: center;
+       
+        /* Ensure the background image covers the entire background */
+    }
+</style>
+
+<body>
+    <div class="registration-container">
+        <form class="registration-form" action="home.html" method="get">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+            
+            <div class="registration-link">
+                <p class="not"> Don't have an account?<a href="register.html">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

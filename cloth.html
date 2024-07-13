@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now</title>
+    <link href="charity.html">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: row-resize;
+        }
+        
+        .sidebar-menus {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 100vh;
+            background-color: grey;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: visible;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .sidebar-menus:hover {
+            width: 250px;
+        }
+        
+        .sidebar-menus a {
+            text-decoration: none;
+            color: #fff;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        .sidebar-menus a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .sidebar-menus ion-icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
+
+
+    <header>
+        <h1>Donate Now</h1>
+    </header>
+    <section>
+        <form action="cloth.php" method="post" id="donationForm">
+            <h1>Donation for Cash</h1>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name1" required>
+
+            <label for="name">Last Name:</label>
+            <input type="text" id="name2" name="name2" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email1" required>
+
+            <label for="amount">Donour Mobile No:</label>
+            <input type="number" id="amount" name="amount1" required>
+
+            <label for="Acno">Account No:</label>
+            <input type="text" id="acno" name="ac1" required>
+
+            <label for="currency">Amount Type:</label>
+            <select id="currency" name="currency" required>
+                <option value="inr">INR</option>
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="gbp">GBP</option>
+            </select>
+
+            <h2>Payment Options:</h2>
+            <label for="googlepay">Google Pay UPI ID:</label>
+            <input type="text" id="googlepay" name="googlepay" required>
+
+            <button type="submit" id="submitBtn">Donate Cash</button>
+        </form>
+    </section>
+</body>
+
+</html>

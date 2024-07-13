@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <style>
+        /* Global reset */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .registration-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .registration-form {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        .registration-link {
+            text-align: center;
+        }
+        
+        .registration-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .registration-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .registration-form {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="registration-container">
+        <div class="registration-form" id="login-form">
+            <form action="user.php" method="post">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" name="login">Login</button>
+                </div>
+                <div class="registration-link">
+                    <p class="not">Don't have an account? <button type="button" onclick="showRegistrationForm()">Register</button></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="registration-form" id="registration-form" style="display: none;">
+            <form action="user.php" method="post">
+                <h2>Registration</h2>
+                <div class="form-group">
+                    <label for="reg-username">Username</label>
+                    <input type="text" id="reg-username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone No</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" name="register">Register</button>
+                </div>
+                <div class="registration-link">
+                    <p class="not">Already have an Account! <button type="button" onclick="showLoginForm()">Login</button></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showRegistrationForm() {
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("registration-form").style.display = "block";
+        }
+
+        function showLoginForm() {
+            document.getElementById("registration-form").style.display = "none";
+            document.getElementById("login-form").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
